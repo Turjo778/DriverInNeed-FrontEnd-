@@ -1,0 +1,31 @@
+<table class="table table-striped" ng-show="show">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>address</th>
+            <th>email</th>
+            <th>client Status</th>
+            <th>Delete</th>
+        </tr>
+
+    </thead>
+    <tbody>
+   
+        <tr *ngFor="let data of clientdata" >
+            <td>{{data[0]}}</td>
+            <td>{{data[1]}}</td>
+            <td>{{data[2]}}</td>
+            <td>{{data[3]}}</td>
+            <td>{{data[4]}}</td>
+            <td>{{data[5]}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" name="phone" (click)="onDelete(data[2])" >Delete</button>
+                
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>

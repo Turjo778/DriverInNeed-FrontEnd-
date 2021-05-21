@@ -1,0 +1,114 @@
+<nav class="navbar" style="font-family: Bangers, cursive;
+color: white;
+font-size: 30px;">
+   <span id="name"> DriverInNeed</span>
+</nav>
+
+<body>
+
+
+        <input type ="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-times" id="cancel"></i>
+        <i class="fas fa-bars" id="btn"></i>
+        
+    </label>
+    
+    
+        <div class="sidebar">
+            <div class="image" >
+                <img class="card-img-top" [src]="imgSrc" >
+            </div>
+            <header><strong>{{name}}</strong></header>
+            <!-- routerLink="/clientprofile" -->
+            <ul>
+                <li><a routerLink="/clientprofile"><i class="fas fa-qrcode"></i>My Profile</a></li>
+                <li><a href=#><i class="fas fa-file-invoice-dollar"></i>Account</a></li>
+                <li><a routerLink="/login"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+            </ul>
+        </div>
+
+
+
+      
+        
+        <div class="offerBox" *ngIf="displayOfferBox" >
+            <div class="row">
+                <div class="col-xl-2 col-lg-1"></div>
+                <div class="col-xl-4 col-lg-4 col-md-4 ">
+                    
+                        <div class="card " >
+                            <img [src]="daily" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button type="button" class="btn btn-primary" (click)="onPress()">Subscribe</button>
+                            </div>
+                        </div>
+                    
+                </div>
+              
+                <div class="col-xl-4 col-lg-4 col-md-4">
+                    
+                        <div class="card " >
+                            <img [src]="monthly" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button type="button" class="btn btn-primary" (click)="onPressMonthly()">Subscribe</button>
+                            </div>
+                        </div>
+                    
+                </div>
+                <div class="col-xl-2 col-lg-1"></div>
+            </div>
+        </div>
+
+
+        <div id="comp-render" *ngIf="display">
+            <app-daily></app-daily>
+         </div>
+         <div id="comp-render" *ngIf="display1">
+            <app-monthly></app-monthly>
+         </div>
+   
+
+  <div class=currentService  *ngIf="showCurrentService">
+      <!-- <h1>service started</h1> -->
+      <div class="waviy">
+        <span style="--i:1">S</span>
+        <span style="--i:2">e</span>
+        <span style="--i:3">r</span>
+        <span style="--i:4">v</span>
+        <span style="--i:5">i</span>
+        <span style="--i:6">c</span>
+        <span style="--i:7">e</span>
+        <span class="space" style="--i:9">S</span>
+        <span style="--i:10">t</span>
+        <span style="--i:11">a</span>
+        <span style="--i:12">r</span>
+        <span style="--i:13">t</span>
+        <span style="--i:14">e</span>
+        <span style="--i:15">d</span>
+
+       </div>
+      <div class="info">
+          <h3>Driver Name : {{drivername}}</h3>
+          <br>
+          <h3>Service Start date :{{startdate}}</h3>
+          <br>
+          <h3>Service End date :{{enddate}}</h3>
+          <br>
+        
+          <button style="margin-left: 20px;"  type="button" class="btn btn-danger"><i class="fa fa-close"></i> Stop Service</button>
+
+
+      </div>
+     
+  </div>
+
+
+</body>
+
+
+  

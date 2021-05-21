@@ -1,0 +1,41 @@
+.loginForm{
+  margin-top: 15%; 
+  opacity: 0.85;
+  /* box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12) */
+  box-shadow:5px 10px rgb(226, 21, 21);
+;
+  background-color: white;
+  border-radius: 5px;
+  padding:40px 30px 40px 30px;
+ }
+
+ .loginForm .card{
+    padding-top: 30px;
+  padding-bottom: 80px;  
+ }
+
+ .background{
+     
+     width: 100%;
+     height: 100vh;
+   background-image: url("/assets/image/client.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   overflow-x: hidden;
+ 
+ }
+ .loginForm .btn{
+     padding:5px 35px 5px 35px;
+ }
+ @media only screen and (max-width: 990px){
+  .loginForm{
+    margin-top:0;
+  }
+ }

@@ -1,0 +1,163 @@
+<nav class="navbar" style="font-family: Bangers, cursive;
+color: white;
+font-size: 30px;">
+   <span id="name"> DriverInNeed</span>
+  </nav>
+<div class="body">
+   <div class="row">
+    <div class="col-1"></div>
+        <div class="col">
+            <div class="image-box">
+                    <div class="image">
+                      <img class="card-img-top" [src]="imgSrc" >
+  
+                    </div>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Add New</button>
+            </div>
+        </div>
+        
+    </div> 
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5">
+            <div class="textbody1">
+               <span>First name : {{ fname}}</span>
+               <br>
+               <br>
+               <span>Last name : {{ lname}}</span>
+               <br>
+               <br>
+               <span>Address : {{ address}}</span> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addressmodal">Edit</button>
+               <br>
+               <br>
+               <span>Email : {{ email}}</span> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#emailmodal">Edit</button>
+               <br>
+               <br>
+               <span>Phone : {{ phone}}</span> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#phonemodal">Edit</button>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="textbody2">
+              <span>NID : {{ nid}}</span>
+              <br>
+              <br>
+              <span>License : {{ license}}</span><button type="button" class="btn btn-success" data-toggle="modal" data-target="#licensemodal">Edit</button>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+<!-- image Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Choose from files</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form>
+            <div class="modal-body">
+              <label class="image-upload-btn">
+                <span>Select Image</span>
+                <input  type="file" name="image"  (change)="fileselected($event)">
+              
+              </label>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="sendselectedfile()" >Save changes</button> 
+            
+            </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
+<!-- edit address -->
+<div class="modal fade" id="addressmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter New Address</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text"   [(ngModel)]="enteredAddress" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="editaddress()">Save changes</button> 
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- edit email -->
+<div class="modal fade" id="emailmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter New Email</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text"   [(ngModel)]="enteredEmail" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="editEmail()">Save changes</button> 
+      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- edit phone -->
+<div class="modal fade" id="phonemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter New Phone Number</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text"  [(ngModel)]="enteredPhone" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="editPhone()">Save changes</button> 
+      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- edit license -->
+<div class="modal fade" id="licensemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter New license Number</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text"  [(ngModel)]="enteredLicense" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="editLicense()">Save changes</button> 
+      
+      </div>
+    </div>
+  </div>
+</div>

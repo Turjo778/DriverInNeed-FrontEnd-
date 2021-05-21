@@ -1,0 +1,22 @@
+.top {
+  background-color: #f0ff8f;
+  height: 50px;
+  padding-top: 10px;
+  text-align: center;
+}
+#name {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
+.btnArea {
+  width: 80%;
+  background-color: #dfe6dc;
+  margin: auto;
+  padding: 15px;
+}
+.btnArea .btn {
+  margin-left: 10px;
+}
+.navbar .btn {
+  margin-left: auto;
+}

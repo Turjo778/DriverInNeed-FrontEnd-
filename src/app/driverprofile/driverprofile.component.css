@@ -1,0 +1,75 @@
+.body {
+  margin: auto;
+  width: 70%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.image-box {
+  width: 95%;
+  height: 30vh;
+  padding-bottom: 20px;
+
+  margin-top: 30px;
+  background-color: #f0f0f0;
+}
+.image {
+  float: left;
+  height: 30vh;
+  width: 250px;
+  /* background-color: red; */
+}
+.image-box button {
+  margin-top: 25vh;
+  margin-left: 20px;
+}
+.textbody2,
+.textbody1 {
+  margin-top: 50px;
+  height: auto;
+  width: 95%;
+  font-size: large;
+  font-weight: 600;
+  background-color: #f0f0f0;
+}
+.textbody1 button {
+  margin-left: 20px;
+}
+input[type="file"] {
+  /* border: none; */
+  display: none;
+  border-bottom: 2px solid #1fb8a1;
+  width: 100%;
+}
+.image-upload-btn {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  height: 50px;
+  width: 180px;
+  background-color: #0d00ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* .modal-body input {
+  display: none;
+} */
+.img-preview-container {
+  background-color: #f7f7f7;
+  position: relative;
+}
+.img-preview {
+  background: center center no-repeat;
+  background-size: contain;
+  height: 116px;
+  width: 116px;
+}
+
+@media only screen and (max-width: 460px) {
+  .image-box button {
+    margin-top: 1vh;
+    margin-left: 10px;
+  }
+}

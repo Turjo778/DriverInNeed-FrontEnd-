@@ -1,0 +1,12 @@
+.card {
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+}
+.card-body {
+  width: 60%;
+  margin: auto;
+}
+.btn-primary {
+  padding: 5px 35px;
+}

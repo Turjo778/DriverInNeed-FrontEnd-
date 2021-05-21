@@ -1,0 +1,134 @@
+/* carousel */
+* {
+  margin: 0;
+  padding: 0;
+}
+.col-xl-8 {
+  overflow-x: hidden;
+}
+.carousel {
+  height: 400px;
+  margin-bottom: 150px;
+  width: 80%;
+  margin: auto;
+}
+*/ .card {
+  margin-top: 50px;
+  width: 50%;
+  margin: auto;
+  border: none;
+  text-align: center;
+
+  height: 450px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  border-radius: 5px;
+}
+.carousel-item {
+  margin-top: 25px;
+}
+.card-img-top {
+  height: 300px;
+  width: 350px;
+  margin: auto;
+
+  border-radius: 5px;
+}
+.card-text {
+  margin-top: 30px;
+  font-size: 20px;
+}
+.card-title {
+  font-size: 30px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+a {
+  padding-top: 20px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
+}
+
+.banner p {
+  padding-top: 100px;
+  height: 200px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 50px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 10s linear infinite;
+  position: relative;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+.banner {
+  height: 300px;
+}
+/*--------steps------------  */
+.panel {
+  height: 200px;
+  border: none;
+}
+.panel-group {
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+}
+.collapsible-box {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.panel .panel-heading {
+  background-color: #1c5180;
+  height: 40px;
+  border-radius: 7px;
+  padding-top: 10px;
+}
+.panel-group a {
+  color: #fff;
+}
+.panel-title {
+  text-align: center;
+}
+.panel-body {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+}
+.panel-collapse {
+  border: none;
+}
+/* testimonial slider */
+.row-slider {
+  background-color: #bfecff;
+}
+
+/*  */
+.carousel {
+  height: 400px;
+  margin-bottom: 150px;
+  width: 80%;
+  margin: auto;
+}

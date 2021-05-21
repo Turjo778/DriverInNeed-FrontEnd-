@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.card-img-top {
+  height: 190px;
+  width: 200px;
+  background-color: gray;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 50%;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-image: linear-gradient(180deg, #ac3b61, #123c69);
+  text-align: center;
+  line-height: 60px;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  font-family: "Merriweather", serif;
+  text-align: center;
+  line-height: 70px;
+}
+.sidebar ul a {
+  color: white;
+  font-size: 20px;
+  font-family: "Rufina", serif;
+  line-height: 60px;
+  box-sizing: border-box;
+  transition: 0.2s;
+  text-decoration: none;
+}
+ul li:hover a {
+  padding-left: 15px;
+}
+.sidebar ul li i {
+  margin-right: 15px;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+
+  cursor: pointer;
+  /* background: #a3a375; */
+  border-radius: 3px;
+  padding: 6px 12px;
+  transition: all 0.5s ease;
+}
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  transition: all 0.5s ease;
+}
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: white;
+  padding: 4px 9px;
+  transition: all 0.5s ease;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  left: 195px;
+}
+#check:checked ~ section {
+  margin-left: 180px;
+}
+section {
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.row {
+  text-align: center;
+  margin-top: 50px;
+}
+.form-control {
+  border: none;
+  border-bottom: 3px solid grey;
+}
+.btn-primary {
+  padding: 5px 10px;
+}
+.head {
+  /* font-family: 'RocknRoll One', sans-serif; */
+  font-family: "Dela Gothic One", cursive;
+  font-size: 40px;
+  color: #20a3fa;
+  text-shadow: 2px 5px #051e2e;
+}
+.btnArea {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.navbar {
+  width: 100%;
+  height: 90px;
+  background-color: #ac3b61;
+  margin-bottom: 20px;
+}
+.currentService {
+  height: 400px;
+  /* border-style: solid; */
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.info h3 {
+  font-family: "Newsreader", serif;
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 20px;
+}
+/*  */
+.waviy {
+  position: relative;
+  font-family: "Newsreader", serif;
+  text-align: center;
+  font-size: 30px;
+}
+.space {
+  margin-left: 15px;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+
+  color: black;
+  text-transform: uppercase;
+  animation: flip 5s infinite;
+  animation-delay: calc(0.5s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+.bannerimage {
+  width: auto;
+  height: 30vh;
+  background-color: white;
+  margin-top: 10%;
+}
+/*  */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Concert One", cursive;
+  font-size: 50px;
+}
+.hover-cut {
+  color: #333;
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+  transform: skewX(0deg) translateX(0px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hover-cut:hover {
+  transform: skewX(-15deg) translateX(18px);
+  color: aquamarine;
+}
+.hover-cut::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 6px;
+  width: 0%;
+  background: #fff;
+  overflow: hidden;
+  transition: 0.3s;
+  z-index: 1;
+  transform: rotate(5deg);
+}
+.hover-cut:hover::before {
+  width: 110%;
+  left: -5%;
+}
+.hover-cut::after {
+  content: attr(data-text);
+  position: absolute;
+  left: -5%;
+  top: 0;
+  height: 50%;
+  overflow: hidden;
+  transform: skewX(0deg);
+  background: #fff;
+  width: 110%;
+  transition: 0.3s;
+  color: #333;
+}
+.hover-cut:hover::after {
+  transform: skewX(25deg) translateX(-15px);
+  color: aqua;
+}

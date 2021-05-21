@@ -1,0 +1,86 @@
+<div class="background">
+    <div class="row">
+        <div class="col-xl-8 col-lg-8">
+            
+
+        </div>
+        <div class="col-xl-3 col-lg-3 col-sm">
+            <div class="loginForm">
+                <form [formGroup]="Driverform">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="DriverFname">First Name</label>
+                      <input  formControlName="DriverFname"  type="text"  class="form-control" id="DriverFname" placeholder="First Name" (keyup)="removeFname($event)" >
+                      <span id="error-fname" class="error"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="DriverLname">Last Name</label>
+                      <input formControlName="DriverLname"  type="text" class="form-control" id="DriverLname" placeholder="Last Name" (keyup)="removeLname($event)">
+                      <span id="error-lname" class="error"></span>
+                    </div>
+                  </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="DriverEmail">Email</label>
+                        <input formControlName="DriverEmail" type="email" class="form-control" id="DriverEmail" placeholder="Email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="DriverPassword">Password</label>
+                        <input formControlName="DriverPassword" type="password" class="form-control" id="DriverPassword" placeholder="Password">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="DriverPassword">Retype Password</label>
+                        <input formControlName="DriverPassword" type="password" class="form-control" id="RDriverPassword" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="DriverAddress">Address</label>
+                      <input formControlName="DriverAddress" type="text" class="form-control" id="DriverAddress" placeholder="1234 Main St"(keyup)="removeAddress($event)">
+                      <span id="error-address" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="DriverPhone">Phone Number</label>
+                      <input formControlName="DriverPhone" type="text" class="form-control" id="DriverPhone" placeholder="017XXXXXXXX" (keyup)="removePhone($event)">
+                      <span id="error-phone" class="error"></span>
+                    </div>
+                   
+                    <!--  -->
+                    <div>
+                     
+                      <div class="form-check form-check-inline">
+                        <input formControlName="RadioOptions" class="form-check-input" type="radio" name="RadioOptions" id="dailyRadio2" value="daily">
+                        <label class="form-check-label" for="dailyRadio2">Daily</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input formControlName="RadioOptions" class="form-check-input" type="radio" name="RadioOptions" id="MonthlyRadio3" value="monthly" >
+                        <label class="form-check-label" for="MonthlyRadio3">Monthly</label>
+                      </div>
+                    </div>
+                      
+                    <br>
+                    <br>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="DriverNid">NID</label>
+                        <input formControlName="DriverNid" type="text" class="form-control" id="DriverNid"(keyup)="removeNID($event)">
+                        <span id="error-nid" class="error"></span>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="DriverCarLicense">Driver License No</label>
+                        <input formControlName="DriverLicense" type="text" class="form-control" id="DriverCarLicense" (keyup)="removeLicense($event)">
+                        <span id="error-license" class="error"></span>
+                      </div>
+                     
+                      
+                    </div>
+                   
+                    <button type="button"  (click)=getDriverValue() class="btn btn-primary">Sign up</button>
+                   
+                    
+                  </form>
+
+            </div>
+        </div>
+        <div class="col-xl-1 col-lg-1"></div>
+    </div>
+</div>

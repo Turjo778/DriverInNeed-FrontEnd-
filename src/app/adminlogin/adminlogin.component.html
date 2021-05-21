@@ -1,0 +1,24 @@
+
+        <form>
+            <div class="card text-center"  >
+                <div class="card-body">
+                <h5 class="card-title"><strong>Admin Log In</strong></h5>
+                <br>
+                <div class="form-group">
+        
+                    <label for="phonenumber">Phone Number</label>
+                    <input  type="text" [(ngModel)]="getAdminData.phonenumber"  class="form-control" id="phonenumber" name="phonenumber" placeholder="Enter ID">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input  type="password" [(ngModel)]="getAdminData.password"  class="form-control" id="password" name="password" placeholder="password">
+                </div>
+        
+                <br>
+                <button type="button"  (click)="getadminValue()" class="btn btn-primary">Enter</button>
+              
+                </div>
+            </div>
+        </form>
+

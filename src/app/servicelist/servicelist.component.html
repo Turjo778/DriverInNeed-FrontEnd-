@@ -1,0 +1,48 @@
+<table class="table table-striped" ng-show="show">
+    <thead>
+        <tr>
+           <th>ID</th>
+            <th>Service Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Fare</th>
+            <th>Client Name</th>
+            <th>Client Address</th>
+            <th>Client Phone</th>
+            <th>Driver Name</th>
+            <th>Driver Address</th>
+            <th>Driver Phone</th>
+            <th>License No.</th>
+            <th>Delete</th>
+           
+        </tr>
+
+    </thead>
+     <tbody>
+   
+        <tr *ngFor="let data of servicedata" >
+            <td>{{data[0]}}</td>
+            <td>{{data[1]}}</td>
+            <td>{{data[2]}}</td>
+            <td>{{data[3]}}</td>
+            <td>{{data[4]}}</td>
+            <td>{{data[5]}}{{" "+data[6]}} </td>
+            
+            <td>{{data[7]}}</td>
+            <td>{{data[8]}}</td>
+            <td>{{data[9]}}{{" "+data[10]}} </td>
+            
+            <td>{{data[11]}}</td>
+            <td>{{data[12]}}</td>
+            <td>{{data[13]}}</td>
+            
+            <td>
+                <button type="button" class="btn btn-danger" name="id" (click)="DeleteService(data[0],data[8],data[12])" >Delete</button>
+                
+            </td>
+
+        </tr>
+    </tbody> 
+
+</table>
+

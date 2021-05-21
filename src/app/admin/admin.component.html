@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <span id="name">Admin:{{name}}</span>
+   
+    <a class="btn btn-outline-danger my-2 my-sm-0" href="http://127.0.0.1:4200/login" >Logout</a>
+   
+    
+</nav>
+
+
+
+
+
+<br>
+<div class="btnArea">
+    
+    <button type="button" class="btn btn-primary" (click)=clientlist()>Client Data</button>
+    
+    <button type="button" class="btn btn-primary" (click)=driverlist()>Driver Data</button>
+    <button type="button" class="btn btn-primary" (click)=servicelist()>Services</button>
+</div>
+<div id="comp-render" *ngIf="display">
+    <app-clientlist></app-clientlist>
+ </div>
+ <div id="comp-render" *ngIf="display1">
+    <app-driverdata></app-driverdata>
+ </div>
+ <div id="comp-render" *ngIf="display2">
+   <app-servicelist></app-servicelist>
+ </div>
+  
+
+
+

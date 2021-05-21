@@ -1,0 +1,87 @@
+<nav class="navbar" style="font-family: Bangers, cursive;
+color: white;
+font-size: 30px;">
+   <span id="name"> DriverInNeed</span>
+  </nav>
+<!--  -->
+<body>
+    <input type ="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn" ></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar sticky-top">
+      
+        <div class="image" >
+            <img class="card-img-top" [src]="imgSrc" >
+        </div>
+        <header ><span>{{fname}} {{lname}}</span></header>
+        
+        <ul>
+            <li><a routerLink="/driverprofile"><i class="fas fa-qrcode"></i>My Profile</a></li>
+            <li><a href=#><i class="fas fa-file-invoice-dollar"></i>Account</a></li>
+            <li><a routerLink="/login"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+        </ul>
+    </div>
+    <!-- <div class="bannerimage"> -->
+        <div class="bannerimage">
+            <h1 class="hover-cut" data-text="Looking For Job ?">
+              Looking For Job ?
+            </h1>
+          </div>
+          
+          
+    <!-- </div> -->
+
+    <section>
+     <div class="btnArea">
+        <button type="button" class="btn btn-primary btn-lg btn-block"  (click)="searchJob()">Search for Job</button> 
+     </div>
+
+     <div id="comp-render" *ngIf="display">
+        <app-joblist></app-joblist>
+     </div>
+
+
+
+     <div class="currentjob">
+
+     </div>
+    </section>
+   
+
+    <div class=currentService  *ngIf="showCurrentService">
+        <!-- <h1>service started</h1> -->
+        <div class="waviy">
+          <span style="--i:1">S</span>
+          <span style="--i:2">e</span>
+          <span style="--i:3">r</span>
+          <span style="--i:4">v</span>
+          <span style="--i:5">i</span>
+          <span style="--i:6">c</span>
+          <span style="--i:7">e</span>
+          <span class="space" style="--i:9">S</span>
+          <span style="--i:10">t</span>
+          <span style="--i:11">a</span>
+          <span style="--i:12">r</span>
+          <span style="--i:13">t</span>
+          <span style="--i:14">e</span>
+          <span style="--i:15">d</span>
+  
+         </div>
+        <div class="info">
+            <h3>Client Name :{{clientname}}</h3>
+            <br>
+            <h3>Service Start date :{{startdate}}</h3>
+            <br>
+            <h3>Service End date :{{enddate}}</h3>
+            <br>
+          
+            <button style="margin-left: 20px;"  type="button" class="btn btn-danger"><i class="fa fa-close"></i> Stop Service</button>
+  
+  
+        </div>
+       
+    </div>
+  
+</body>
