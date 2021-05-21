@@ -19,8 +19,6 @@
   padding: 16px;
 }
 .row {
-  /* justify-content: space-around; */
-  /* justify-content: start;*/
   flex-wrap: 250px;
   padding-top: 10px;
 }
