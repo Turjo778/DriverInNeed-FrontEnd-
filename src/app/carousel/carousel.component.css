@@ -55,7 +55,7 @@ a {
 }
 /*--------steps------------  */
 .panel {
-  height: 200px;
+  height: auto;
   border: none;
 }
 .panel-group {
