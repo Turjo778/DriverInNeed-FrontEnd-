@@ -17,6 +17,7 @@ import { ClientComponent } from './client/client.component';
 
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
+import { DriverAccountComponent } from './driver-account/driver-account.component';
 
 
 
@@ -32,7 +33,8 @@ const routes: Routes = [
   {path:'clientprofile', component:ClientprofileComponent},
   {path:'driverprofile', component:DriverprofileComponent},
   {path:'daily',component:DailyComponent},
-  {path:"monthly",component:MonthlyComponent}
+  {path:"monthly",component:MonthlyComponent},
+  {path:"DriverAccount",component:DriverAccountComponent}
 
 ];
 

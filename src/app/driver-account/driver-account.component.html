@@ -1,0 +1,21 @@
+<nav class="navbar" style="font-family: Bangers, cursive;color: white;font-size: 30px;">
+   <span id="name"> Driver In Need</span>
+</nav>
+<body>
+    <div class="card">
+        <div class="card-header">
+          Change rate
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">For Daily driver hourly rate should be between 200Bdt -400Bdt</h5>
+          <h5 class="card-title">For Monthly driver rate should be between 15000Bdt -251000Bdt</h5>
+          <div class="input-group mb-3">
+            
+            <input type="text" class="form-control"  [(ngModel)]="rate">
+           
+          </div>
+          <button type="button" class="btn btn-outline-success"(click)="saverate(rate)">Save Rate</button>
+        
+        </div>
+      </div>
+</body>

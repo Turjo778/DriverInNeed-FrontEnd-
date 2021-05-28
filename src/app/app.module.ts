@@ -25,6 +25,7 @@ import { JoblistComponent } from './joblist/joblist.component';
 import { ClientlistComponent } from './clientlist/clientlist.component';
 import { DriverdataComponent } from './driverdata/driverdata.component';
 import { ServicelistComponent } from './servicelist/servicelist.component';
+import { DriverAccountComponent } from './driver-account/driver-account.component';
 
 
 
@@ -51,6 +52,7 @@ import { ServicelistComponent } from './servicelist/servicelist.component';
     ClientlistComponent,
     DriverdataComponent,
     ServicelistComponent,
+    DriverAccountComponent,
    
    
   ],

@@ -1,0 +1,17 @@
+.navbar {
+  width: auto;
+  height: 90px;
+  background-color: #ac3b61;
+  margin-bottom: 20px;
+}
+body {
+  margin: auto;
+  height: 60vh; /*later change it to auto */
+  width: 90%;
+  background-color: cadetblue;
+}
+.card {
+  margin: auto;
+
+  width: 40%;
+}
