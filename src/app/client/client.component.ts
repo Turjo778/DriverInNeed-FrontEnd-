@@ -29,7 +29,7 @@ export class ClientComponent implements OnInit {
   public lname:any
   imgSrc:string="/assets/image/null.png"
 
- 
+ public driverphone=null
   public drivername:any
   public driverfirstname:any
   public driverlastname:any
@@ -38,7 +38,8 @@ export class ClientComponent implements OnInit {
 //  val:any
 //   random: any=[]
   // constructor(private login:LoginService, private shared:SharedService, ) { }
-  constructor(private clientserv:ClientserviceService ) {}
+  constructor(private clientserv:ClientserviceService,
+              private shared:SharedService ) {}
   ngOnInit(): void {
     this.fname=localStorage.getItem("cfname")
     this.lname=localStorage.getItem("clname")
@@ -50,7 +51,7 @@ export class ClientComponent implements OnInit {
    })
     
    this.clientserv.CheckClientInService(this.phone).subscribe(data=>{
-   
+   console.log(data)
    if (data!=null){
     this.displayOfferBox=false
     this.showCurrentService=true
@@ -61,13 +62,14 @@ export class ClientComponent implements OnInit {
    this.drivername=( this.driverfirstname+" "+this.driverlastname)
    this.startdate=data[2]
    this.enddate=data[3]
+   this.driverphone=data[4]
 
     
    })
    
     this.name=(this.fname+" "+this.lname)
    
-   
+ 
   
   }
 //  
@@ -88,5 +90,22 @@ onPressMonthly(){
   }
   
   
+}
+
+stopservice(){
+  var data1=[this.phone,'vacant']
+  this.shared.changeClientstatus(data1).subscribe(res=>{
+    console.log(res)
+  })
+
+  var data2=[this.driverphone,'vacant']
+  this.shared.changedriverstatus(data2).subscribe(res=>{
+   console.log(res)
+ })
+ this.shared.delService(this.phone).subscribe(res=>{ //
+  console.log(res)
+  location.reload()
+  
+ })
 }
 }

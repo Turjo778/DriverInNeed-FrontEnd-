@@ -24,7 +24,7 @@ export class ServicelistComponent implements OnInit {
    DeleteService(id:any,cp:any,dp:any){
     var tostorecpdp=[id,cp,dp]
     console.log(tostorecpdp)
-     this.shared.delService(id).subscribe(res=>{
+     this.shared.delService(cp).subscribe(res=>{ //
       console.log(res)
       location.reload()
       
