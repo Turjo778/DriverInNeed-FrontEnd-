@@ -12,6 +12,7 @@
                         <p class="card-text">Phone Number: {{item[2]}}</p>
                         <p class="card-text">Email: {{item[3]}}</p>
                         <p class="card-text">License: {{item[4]}}</p>
+                        <p class="card-text">Fare: {{item[7]}}</p>
                         <button type="button" class="btn btn-primary" (click)="selectedDriver(item[2])" data-toggle="modal" data-target="#exampleModalLong">Select</button>
                         </div>
                     </div>
@@ -53,6 +54,7 @@
                     <h4>Driver Address :<span>{{address}}</span></h4>
                     <h4>Driver Phone :<span>{{phone}}</span></h4>
                     <h4>Driver License :<span>{{license}}</span></h4>
+                    <h4>Driver Fare :<span>{{fare}}</span></h4>
                  </div>
               </div>
           </div>

@@ -1,21 +1,52 @@
 <nav class="navbar" style="font-family: Bangers, cursive;color: white;font-size: 30px;">
    <span id="name"> Driver In Need</span>
 </nav>
-<body>
+<body >
+
+<div class="row">
+  <div class="col-xl-3 col-lg-3 col-md-2 col-sm-0"></div>
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
     <div class="card">
-        <div class="card-header">
-          Change rate
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">For Daily driver hourly rate should be between 200Bdt -400Bdt</h5>
-          <h5 class="card-title">For Monthly driver rate should be between 15000Bdt -251000Bdt</h5>
-          <div class="input-group mb-3">
-            
-            <input type="text" class="form-control"  [(ngModel)]="rate">
-           
-          </div>
-          <button type="button" class="btn btn-outline-success"(click)="saverate(rate)">Save Rate</button>
-        
-        </div>
+      <div class="card-header">
+        Change rate
       </div>
+      <div class="card-body">
+        <h5 class="card-title">For Daily driver hourly rate should be between 200Bdt - 400Bdt</h5>
+        <h5 class="card-title">For Monthly driver rate should be between 15000Bdt - 25000Bdt</h5>
+        <div class="input-group mb-3">
+          
+          <input type="text" class="form-control" #rate>
+         
+        </div>
+        <button type="button" class="btn btn-outline-success"(click)="saverate(rate.value)">Save Rate</button>
+      
+      </div>
+      <button type="button" class="btn btn-info" onclick="history.back()">Back</button>
+    </div>
+    
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+    <div class="prevRate">
+        <!-- <span id="fare" Current fare:{{fare}}</span><br> -->
+          <p style="text-align: center; font-family: 'Squada One', cursive; font-size: 25px;">current fare:{{fare}}</p>
+      
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-2 col-sm-0"></div>
+
+</div>
+  
+
+  
+  
+   
+      
+   
+   
+     
+   
+  
+ 
+   
+      
 </body>

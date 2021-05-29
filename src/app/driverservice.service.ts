@@ -16,6 +16,10 @@ getjoblist="http://127.0.0.1:5000/getjob"
 
 addDriverImgUrl="http://127.0.0.1:5000/addDriverImage"
 getDriverImgUrl="http://127.0.0.1:5000/displayDriverImage/"
+DriverFareUrl="http://127.0.0.1:5000/setDriversFare"
+
+fetchDriverFareURL="http://127.0.0.1:5000/getDriversFare/"
+
   constructor(private http:HttpClient) { }
 
   addNewDriver(data:any)
@@ -52,5 +56,13 @@ getDriverImgUrl="http://127.0.0.1:5000/displayDriverImage/"
   }
   CheckDriverInService(phn:any):Observable<any>{
     return this.http.get<any[]>("http://127.0.0.1:5000/checkDriverInService/"+phn)
+  }
+  addDriverFare(data:any){
+    console.log(data)
+    return this.http.put(this.DriverFareUrl,data) 
+  }
+ 
+  getDriverFare(data:any):Observable<any>{
+    return this.http.get<any[]>(this.fetchDriverFareURL+data)
   }
 }

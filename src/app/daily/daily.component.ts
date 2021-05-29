@@ -36,7 +36,7 @@ public Cfname:any
 public Clname:any
 public Caddress:any
 public Cphone:any
-
+public fare:any
 public servicedata:any=[]
 
   constructor(public clientserv:ClientserviceService,
@@ -65,13 +65,14 @@ public servicedata:any=[]
     console.log("Driver phone ==>",value)
 
     this.shared.getdriverbyPhn(value).subscribe(data=>{
+      
       this.fname=data[0]
       this.lname=data[1]
       this.address=data[2]
       this.phone=data[3]
       this.license=data[4]
       this.service=data[5]
-     
+      this.fare=data[6]
       
      
     })

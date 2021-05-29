@@ -33,6 +33,7 @@ public Clname:any
 public Caddress:any
 public Cphone:any
 public servicedata:any=[]
+public fare:any
   constructor(private clientserv:ClientserviceService,
               private shared: SharedService
                ) {}
@@ -55,6 +56,7 @@ public servicedata:any=[]
       this.phone=data[3]
       this.license=data[4]
       this.service=data[5]
+      this.fare=data[6]
     })
 
     this.Cfname=localStorage.getItem("cfname")
