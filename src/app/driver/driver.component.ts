@@ -25,7 +25,8 @@ export class DriverComponent implements OnInit {
  public id:any
 getdata={}
 display=false
-showCurrentService=true
+showCurrentService=false
+searchJobbtn=true
   constructor(private shared:SharedService, private login:LoginService, private driverserv:DriverserviceService,
               ) { }
 
@@ -43,9 +44,10 @@ showCurrentService=true
 
     this.driverserv.CheckDriverInService(this.phone).subscribe(data=>{  /*<==========  need correction*/
       console.log(data)
-      if (data == null){
-        this. showCurrentService=false
-      } 
+      if (data != null){
+        this. showCurrentService=true
+        this.searchJobbtn=false
+      }
       this.clientFname=data[0]
       this.clinetLname=data[1]
       this.clientname=(this.clientFname+" "+this.clinetLname)

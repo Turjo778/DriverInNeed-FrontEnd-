@@ -75,15 +75,15 @@ export class SharedService {
     return this.http.delete(this.deleteServiceDataUrl+id)
     
   }
-  changedriverstatus(data1:any):Observable<any>{
-    console.log(data1)
+  changedriverstatus(data2:any):Observable<any>{
+    console.log(data2)
    
-    return this.http.put(this.chnDriverStatus,data1)
+    return this.http.put(this.chnDriverStatus,data2)
   }
 
 
-  changeClientstatus(data2:any){
-    return this.http.put(this.chnClientStatus,data2)
+  changeClientstatus(data1:any){
+    return this.http.put(this.chnClientStatus,data1)
   }
   
 }

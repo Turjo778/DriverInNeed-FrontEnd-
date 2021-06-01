@@ -19,6 +19,7 @@ export class ServicelistComponent implements OnInit {
      
       
     })
+    // console.log(this.servicedata)
    }   
   
    DeleteService(id:any,cp:any,dp:any){

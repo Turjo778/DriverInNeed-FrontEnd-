@@ -35,7 +35,7 @@ font-size: 30px;">
 
     <section>
      <div class="btnArea">
-        <button type="button" class="btn btn-primary btn-lg btn-block"  (click)="searchJob()">Search for Job</button> 
+        <button type="button" class="btn btn-primary btn-lg btn-block"  *ngIf="searchJobbtn"  (click)="searchJob()">Search for Job</button> 
      </div>
 
      <div id="comp-render" *ngIf="display">

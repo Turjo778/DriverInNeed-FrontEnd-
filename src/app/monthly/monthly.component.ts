@@ -41,10 +41,11 @@ public fare:any
   ngOnInit(): void {
     this.clientserv.getMonthlyDriver().subscribe(info=>{
       this.data=info
+      console.log(info)
      if (info.length==0){
       this.errormsg="Drivers are unavailable right now"
      }
-      console.log(info.length)
+      console.log(info)
       
     })
   }
@@ -84,7 +85,7 @@ public fare:any
       this.service,
       this.startingtime,
       this.endingtime,
-                  //enter fare
+      this.fare,          //enter fare
       this.Cfname,
       this.Clname,
       this.Caddress,

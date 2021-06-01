@@ -35,6 +35,8 @@ export class ClientComponent implements OnInit {
   public driverlastname:any
   public startdate:any
   public enddate:any
+
+ 
 //  val:any
 //   random: any=[]
   // constructor(private login:LoginService, private shared:SharedService, ) { }
@@ -67,12 +69,26 @@ export class ClientComponent implements OnInit {
     
    })
    
-    this.name=(this.fname+" "+this.lname)
+  this.name=(this.fname+" "+this.lname)
    
  
   
+  // var dt = new Date();
+  // var setMin =dt.getMinutes() +10 ;
+  // var currenttime=dt.getMinutes()
+  // var endingtime=24
+  // console.log(currenttime)
+ 
+  // if(currenttime===endingtime){
+  //   console.log(true)
+  // }else{
+  //   console.log(false)
+  // }
+  //
+ 
+  
   }
-//  
+
 onPress() {
  
   this.display = !this.display;
@@ -92,8 +108,13 @@ onPressMonthly(){
   
 }
 
+
+
+
+
 stopservice(){
-  var data1=[this.phone,'vacant']
+ 
+    var data1=[this.phone,'vacant']
   this.shared.changeClientstatus(data1).subscribe(res=>{
     console.log(res)
   })
@@ -104,8 +125,12 @@ stopservice(){
  })
  this.shared.delService(this.phone).subscribe(res=>{ //
   console.log(res)
-  location.reload()
+  // location.reload()
   
  })
 }
+ 
+  
+    
+    
 }

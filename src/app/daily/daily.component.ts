@@ -56,9 +56,13 @@ public servicedata:any=[]
      })
     
     
-   
-
+     var time = new Date();
+     console.log(time.getHours()+":"+time.getMinutes()+":"+time.getSeconds())
      
+     var endtime = new Date();
+     
+     console.log(endtime.getHours() +24 )
+     console.log((endtime.getHours() +24)-time.getHours())
   }
 
   selectedDriver(value:any){   //info in invoice
@@ -102,21 +106,23 @@ public servicedata:any=[]
         this.service,
         this.startingtime,
         this.endingtime,
-                    //enter fare
+         (this.fare*8),  //enter fare
         this.Cfname,
         this.Clname,
         this.Caddress,
-        this.Cphone,//change to client phone
+        this.Cphone,
         this.fname,
         this.lname,
         this.address,
         this.phone,
         this.license,
         this.servicestatus
+        
       )
     
     
     console.log(this.servicedata)
+    
   // saving service data
     this.shared.servicedata(this.servicedata).subscribe(res=>{
       alert(res)
@@ -135,6 +141,7 @@ public servicedata:any=[]
     alert(res)
     location.reload()
   })
+  
   }
  
 }
