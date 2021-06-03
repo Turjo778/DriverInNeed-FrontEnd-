@@ -22,6 +22,7 @@ export class DriverComponent implements OnInit {
   public clinetLname:any
   public startdate:any
   public enddate:any
+  public cphone:any
  public id:any
 getdata={}
 display=false
@@ -53,7 +54,8 @@ searchJobbtn=true
       this.clientname=(this.clientFname+" "+this.clinetLname)
       this.startdate=data[2]
       this.enddate=data[3]
-
+      this.cphone=data[4]
+4
     })
 
  
@@ -62,7 +64,23 @@ searchJobbtn=true
     this.display=!this.display
   }
 
+  stopservice(){
+ 
+    var data1=[this.cphone,'vacant']
+  this.shared.changeClientstatus(data1).subscribe(res=>{
+    console.log(res)
+  })
 
+  var data2=[this.phone,'vacant']
+  this.shared.changedriverstatus(data2).subscribe(res=>{
+   console.log(res)
+ })
+ this.shared.delService(this.cphone).subscribe(res=>{ //
+  console.log(res)
+  // location.reload()
+  
+ })
+}
 
 
   
