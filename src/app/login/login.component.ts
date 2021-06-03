@@ -35,9 +35,12 @@ export class LoginComponent implements OnInit  {
    this.login.logInUser(this.getData).subscribe(data=>{
     
      this.info=data
+     console.log(data)
      this.pos=data[0]
-      
-    if(this.pos=='client'){
+    if(data=="None"){
+      alert("No such user found")
+    }
+   else if(this.pos=='client'){
       this.router.navigate(['client']);
       this.login.sendinfo(this.info)
       // console.log("==>>"+this.info)
@@ -77,7 +80,7 @@ export class LoginComponent implements OnInit  {
       this.login.setLoggedIn(true)
      
     }
-  
+    
 
    })
    

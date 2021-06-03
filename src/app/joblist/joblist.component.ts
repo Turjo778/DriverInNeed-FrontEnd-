@@ -24,6 +24,8 @@ person2: string="/assets/image/p2.jpg"
     })
  }
   
-
+ selectThisJob(clientPhn:any){
+console.log(clientPhn)
+ }
  
 }

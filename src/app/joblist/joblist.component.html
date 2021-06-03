@@ -11,7 +11,7 @@
                         <p class="card-text">Phone Number: {{item[2]}}</p>
                         <p class="card-text">Email: {{item[3]}}</p>
                         <p class="card-text">Location: {{item[4]}}</p>
-                        <a href="#" class="btn btn-primary">Select</a>
+                        <button type="button" class="btn btn-success" name="phone" (click)="selectThisJob(item[2])" >Select</button>
                         </div>
                     </div>
                 
