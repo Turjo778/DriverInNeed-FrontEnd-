@@ -4,7 +4,7 @@ import { ClientprofileComponent } from './../clientprofile/clientprofile.compone
 import { SharedService } from './../shared.service';
 import { Router } from '@angular/router';
 import { LoginService } from './../login.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵCodegenComponentFactoryResolver } from '@angular/core';
 
 
 @Component({
@@ -71,26 +71,16 @@ export class ClientComponent implements OnInit {
    
   this.name=(this.fname+" "+this.lname)
    
- 
-  
-  // var dt = new Date();
-  // var setMin =dt.getMinutes() +10 ;
-  // var currenttime=dt.getMinutes()
-  // var endingtime=24
-  // console.log(currenttime)
- 
-  // if(currenttime===endingtime){
-  //   console.log(true)
-  // }else{
-  //   console.log(false)
-  // }
-  //
- 
+
   
   }
 
 onPress() {
- 
+ let clientsericeAndPhn=["daily",this.phone]
+ console.log(clientsericeAndPhn)
+this.clientserv.updateClientReqService(clientsericeAndPhn).subscribe(data=>{
+ console.log(data)
+})
   this.display = !this.display;
   if(this.display=this.display){
     this.display1=false
@@ -100,6 +90,10 @@ onPress() {
 }
 // 
 onPressMonthly(){
+  let clientsericeAndPhn=["monthly",this.phone]
+  this.clientserv.updateClientReqService(clientsericeAndPhn).subscribe(data=>{
+    console.log(data)
+   })
   this.display1 = !this.display1;
   if(this.display1=this.display1){
     this.display=false
@@ -125,7 +119,7 @@ stopservice(){
  })
  this.shared.delService(this.phone).subscribe(res=>{ //
   console.log(res)
-  // location.reload()
+  location.reload()
   
  })
 }

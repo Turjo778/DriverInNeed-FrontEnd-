@@ -61,8 +61,8 @@ public servicedata:any=[]
      
      var endtime = new Date();
      
-     console.log(endtime.getHours() +24 )
-     console.log((endtime.getHours() +24)-time.getHours())
+    //  console.log(endtime.getHours() +24 )
+    //  console.log((endtime.getHours() +24)-time.getHours())
   }
 
   selectedDriver(value:any){   //info in invoice

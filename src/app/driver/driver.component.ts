@@ -16,7 +16,7 @@ export class DriverComponent implements OnInit {
   public phone:any
   imgSrc: string="/assets/image/null.png"
   
-
+ 
   public clientname:any
   public clientFname:any
   public clinetLname:any
@@ -37,7 +37,6 @@ searchJobbtn=true
     this.phone=localStorage.getItem("dphone")
    
  
-   
    
     this.driverserv.getDriverImg(this.phone).subscribe(img=>{
       this.imgSrc="data:image/png;base64,"+img
@@ -77,7 +76,7 @@ searchJobbtn=true
  })
  this.shared.delService(this.cphone).subscribe(res=>{ //
   console.log(res)
-  // location.reload()
+  location.reload()
   
  })
 }

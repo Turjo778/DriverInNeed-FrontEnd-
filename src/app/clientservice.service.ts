@@ -59,5 +59,9 @@ clientimg="http://127.0.0.1:5000/displayClientImage/"
   CheckClientInService(phn:any):Observable<any>{
     return this.http.get<any[]>("http://127.0.0.1:5000/checkClientInService/"+phn)
   }
+
+  updateClientReqService(data:any){
+    return this.http.put("http://127.0.0.1:5000/changeClientReqService",data)
+  }
 }
   

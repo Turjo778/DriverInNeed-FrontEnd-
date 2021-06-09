@@ -2,22 +2,73 @@
     
     <div class="content-box">
         <div class="row">
+          <span class="error-msg">{{errormsg}}</span>
             <div class="col"  *ngFor="let item of data">
                 
                     <div class="card" style="width: 250px;">
-                        <img class="card-img-top" src="{{'data:image/png;base64,'+item[5]}}" alt="Card image cap">
+                        <img class="card-img-top" src="{{'data:image/png;base64,'+item[4]}}" alt="Card image cap">
                         <div class="card-body">
                         <h2 class="card-title">{{item[0]+' '+item[1]}}</h2>
                         <p class="card-text">Phone Number: {{item[2]}}</p>
                         <p class="card-text">Email: {{item[3]}}</p>
-                        <p class="card-text">Location: {{item[4]}}</p>
-                        <button type="button" class="btn btn-success" name="phone" (click)="selectThisJob(item[2])" >Select</button>
+                        <p class="card-text">Address: {{item[5]}}</p>
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong" name="phone" (click)="selectThisJob(item[2])" >Select</button>
                         </div>
                     </div>
                 
             </div>
         </div>
     </div>
+    <!--  -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLongTitle">Invoice</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="row dateBox">
+                  <div class="datebox-content"   >
+                      <h4>Service Type :<span></span></h4>
+                      <h4>Service Start Date :<span></span></h4>
+                     
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col driverInfo-box">
+                     <div class="driverInfo">
+                        
+                        <h4>Driver Name : <span>{{Dname}}</span></h4>
+                        <h4>Driver Address : <span>{{Daddress}}</span></h4>
+                        <h4>Driver Phone : <span>{{Dphone}}</span></h4>
+                       
+                     </div>
+                  </div>
+                  <div class="col clientInfo-box">
+                     <div class="clientInfo">
+                        <h4>Client Name :<span>{{Cname}}</span></h4>
+                        <h4>Client Address :<span>{{Caddress}}</span></h4>
+                        <h4>Client Phone :<span>{{Cphone}}</span></h4>
+                        <h4>Car License No. :<span>{{carLicense}}</span></h4>
+                     </div>
+                  </div>
+              </div>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal"(click)="SaveServiceData()">Save changes</button>
+              <!-- (click)="SaveServiceData()" -->
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--  -->
 
 </div>
 

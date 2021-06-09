@@ -71,7 +71,8 @@ export class LoginComponent implements OnInit  {
       localStorage.setItem("daddress",data[7])
       localStorage.setItem("Dlicense",data[7])
       localStorage.setItem("Dservice",data[9])
-      
+      localStorage.setItem("Fare",data[10])
+    
       
       // localStorage.setItem("license",data[8])
 
@@ -100,6 +101,7 @@ export class LoginComponent implements OnInit  {
     localStorage.removeItem('lname')
     localStorage.removeItem('fname')
     localStorage.removeItem('lname')
+    localStorage.removeItem('Fare')
 
   }
   

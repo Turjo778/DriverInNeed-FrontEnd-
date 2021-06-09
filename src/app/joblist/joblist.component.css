@@ -46,3 +46,34 @@
   }
 }
 /*  */
+.modal-title {
+  float: left;
+}
+.dateBox {
+  height: Auto;
+  /* background-color: chartreuse; */
+  justify-content: left;
+  border-bottom: 2px solid#d4d8d9;
+  border-radius: 15px;
+}
+.datebox-content {
+  text-align: left;
+  margin-left: 20px;
+}
+.clientInfo-box {
+  height: 300px;
+  /* background-color: chocolate; */
+}
+.clientInfo {
+  margin-left: 7px;
+}
+.driverInfo-box {
+  height: 300px;
+  /* background-color: cornflowerblue; */
+}
+.error-msg {
+  font-size: 25px;
+  font-family: "Caveat", cursive;
+
+  margin: auto;
+}

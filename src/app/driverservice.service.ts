@@ -12,7 +12,7 @@ updateAddress="http://127.0.0.1:5000/updateDriverAddress"
 updateEmail="http://127.0.0.1:5000/updateDriverEmail"
 updatePhone="http://127.0.0.1:5000/updateDriverPhone"
 updateNid="http://127.0.0.1:5000/updateDriverNid"
-getjoblist="http://127.0.0.1:5000/getjob"
+getjoblist="http://127.0.0.1:5000/getjob/"
 
 addDriverImgUrl="http://127.0.0.1:5000/addDriverImage"
 getDriverImgUrl="http://127.0.0.1:5000/displayDriverImage/"
@@ -42,8 +42,10 @@ fetchDriverFareURL="http://127.0.0.1:5000/getDriversFare/"
     return this.http.put(this.updateNid,data)
   }
 
-  joblist():Observable<any>{
-    return this.http.get<any[]>(this.getjoblist)
+  joblist(data:any):Observable<any>{
+    console.log(data)
+    return this.http.get<any[]>(this.getjoblist+data)
+
   }
 
   addDriverImg(data:any){
@@ -64,5 +66,9 @@ fetchDriverFareURL="http://127.0.0.1:5000/getDriversFare/"
  
   getDriverFare(data:any):Observable<any>{
     return this.http.get<any[]>(this.fetchDriverFareURL+data)
+  }
+ 
+  Getclientbyphn(phn:any){
+    return this.http.get<any>("http://127.0.0.1:5000/clientDatabyPhn/"+phn)
   }
 }
