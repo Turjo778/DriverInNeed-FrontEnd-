@@ -68,12 +68,12 @@ public fare:any
     
     var dt = new Date();
     dt.setHours( dt.getHours()  );
-    this.startingtime=dt.getDate()+"/"+dt.getMonth()+"/"+dt.getFullYear()
+    this.startingtime=dt.getDate()+"/"+(dt.getMonth()+1)+"/"+dt.getFullYear()
     console.log(this.startingtime)
 
     var st = new Date();
     st.setHours( st.getHours() +720 );
-    this.endingtime=st.getDate()+"/"+st.getMonth()+"/"+st.getFullYear()
+    this.endingtime=st.getDate()+"/"+(st.getMonth()+1)+"/"+st.getFullYear()
     console.log(st.getDate()+"/"+st.getMonth()+"/"+st.getFullYear())
 
   }

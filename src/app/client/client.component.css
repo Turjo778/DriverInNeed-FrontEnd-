@@ -184,3 +184,21 @@ section {
 #name {
   color: honeydew;
 }
+.jobreq {
+  width: 40%;
+  margin: auto;
+  height: auto; /* change to auto */
+}
+.candidate {
+  height: 250px;
+  margin: auto;
+}
+.col-4 {
+  height: 250px;
+  width: 250px;
+  /* background-color: black; */
+}
+.col-8 {
+  height: 250px;
+}
+/* modal styling */

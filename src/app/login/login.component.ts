@@ -4,7 +4,7 @@ import { LoginService } from './../login.service';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { Router } from '@angular/router';
 import { NONE_TYPE } from '@angular/compiler';
-
+declare var $: any;
 
 @Component({
   selector: 'app-login',
@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit  {
      console.log(data)
      this.pos=data[0]
     if(data=="None"){
-      alert("No such user found")
+     
+      $('#myModal').modal('show');
     }
    else if(this.pos=='client'){
       this.router.navigate(['client']);
@@ -68,10 +69,10 @@ export class LoginComponent implements OnInit  {
       localStorage.setItem("dphone",data[3])
       localStorage.setItem("dnid",data[4])
       localStorage.setItem("demail",data[6])
-      localStorage.setItem("daddress",data[7])
+      localStorage.setItem("daddress",data[5])
       localStorage.setItem("Dlicense",data[7])
-      localStorage.setItem("Dservice",data[9])
-      localStorage.setItem("Fare",data[10])
+      localStorage.setItem("Dservice",data[8])
+      localStorage.setItem("Fare",data[9])
     
       
       // localStorage.setItem("license",data[8])
@@ -94,14 +95,14 @@ export class LoginComponent implements OnInit  {
     localStorage.removeItem('phone')
     localStorage.removeItem('nid')
     localStorage.removeItem('address')
-    localStorage.removeItem('Dlicense')
+ 
     localStorage.removeItem('license')
     localStorage.removeItem('email')
-    localStorage.removeItem('Dservice')
+
     localStorage.removeItem('lname')
     localStorage.removeItem('fname')
     localStorage.removeItem('lname')
-    localStorage.removeItem('Fare')
+
 
   }
   

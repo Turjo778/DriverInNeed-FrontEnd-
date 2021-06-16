@@ -95,3 +95,6 @@ h1 {
     margin-top: -15px;
   }
 }
+.modal {
+  display: none;
+}

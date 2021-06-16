@@ -72,12 +72,17 @@ font-size: 30px;">
         <div class="info">
             <h3>Client Name :{{clientname}}</h3>
             <br>
+            <h3>Client Phone : {{cphone}}</h3>
+            <br>
+            <h3>Client Address: {{caddress}}</h3>
+            <br>
             <h3>Service Start date :{{startdate}}</h3>
             <br>
             <h3>Service End date :{{enddate}}</h3>
             <br>
-          
-            <button style="margin-left: 20px;" (click)="stopservice()" type="button" class="btn btn-danger"><i class="fa fa-close"></i> Stop Service</button>
+            <h3>Fare :{{fare}}</h3>
+            <!-- <button type="button" class="btn btn-danger">Danger</button> -->
+            <button style="padding:10px; margin-left: 10px; margin-bottom: 15px;"  (click)="stopservice()" type="button" class="btn btn-danger"><i class="fa fa-close"></i> Stop Service</button>
   
   
         </div>

@@ -65,6 +65,7 @@ export class SharedService {
   
   }
   servicedata(data:any){
+    
     return this.http.post(this.ServiceDataUrl,data)
   }
   getservicedata():Observable<any>{

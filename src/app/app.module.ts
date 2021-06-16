@@ -26,6 +26,7 @@ import { ClientlistComponent } from './clientlist/clientlist.component';
 import { DriverdataComponent } from './driverdata/driverdata.component';
 import { ServicelistComponent } from './servicelist/servicelist.component';
 import { DriverAccountComponent } from './driver-account/driver-account.component';
+import { MdbModule } from 'mdb-angular-ui-kit';
 
 
 
@@ -62,7 +63,8 @@ import { DriverAccountComponent } from './driver-account/driver-account.componen
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MdbModule
    
 
 

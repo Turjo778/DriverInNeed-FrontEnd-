@@ -1,4 +1,18 @@
-<div class="frame">
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+       Application Sent  
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="frame"  *ngIf="display">
     
     <div class="content-box">
         <div class="row">
@@ -12,7 +26,9 @@
                         <p class="card-text">Phone Number: {{item[2]}}</p>
                         <p class="card-text">Email: {{item[3]}}</p>
                         <p class="card-text">Address: {{item[5]}}</p>
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong" name="phone" (click)="selectThisJob(item[2])" >Select</button>
+                        <button type="button" class="btn btn-success" data-toggle="modal"  name="phone" (click)="ApplyForThisJob(item[2])">Apply</button>
+                        <!-- data-target="#exampleModalLong" (click)="selectThisJob(item[2])" -->
+
                         </div>
                     </div>
                 
@@ -62,7 +78,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal"(click)="SaveServiceData()">Save changes</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
               <!-- (click)="SaveServiceData()" -->
             </div>
           </div>

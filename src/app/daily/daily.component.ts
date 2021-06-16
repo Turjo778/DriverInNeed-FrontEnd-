@@ -88,7 +88,7 @@ public servicedata:any=[]
     
     var dt = new Date();
     dt.setHours( dt.getHours()  );
-    this.startingtime=dt.getDate()+"/"+dt.getMonth()+"/"+dt.getFullYear()
+    this.startingtime=dt.getDate()+"/"+(dt.getMonth()+1)+"/"+dt.getFullYear()
     console.log(this.startingtime)
   
 

@@ -71,4 +71,8 @@ fetchDriverFareURL="http://127.0.0.1:5000/getDriversFare/"
   Getclientbyphn(phn:any){
     return this.http.get<any>("http://127.0.0.1:5000/clientDatabyPhn/"+phn)
   }
+  applyforjob(data:any){
+    console.log(data)
+    return this.http.post("http://127.0.0.1:5000/ApplyForJob",data)
+  }
 }

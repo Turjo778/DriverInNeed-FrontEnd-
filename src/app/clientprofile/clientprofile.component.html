@@ -2,7 +2,8 @@
 color: white;
 font-size: 30px;">
    <span id="name"> DriverInNeed</span>
-  </nav>
+</nav>
+
 <div class="body">
    <div class="row">
     <div class="col-1"></div>
@@ -21,30 +22,26 @@ font-size: 30px;">
         <div class="col-1"></div>
         <div class="col-5">
             <div class="textbody1">
-               <span>First name : {{ fname}}</span>
-               <br>
-               <br>
-               <span>Last name : {{ lname}}</span>
+               <span class="decorator"> Name : {{fname}}{{" "+lname}}</span>
                <br>
                <br>
                <span>Address : {{ address}}</span> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addressmodal">Edit</button>
                <br>
                <br>
-               <span>Email : {{ email}}</span> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#emailmodal">Edit</button>
+               <span >Email : {{ email}}</span> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#emailmodal">Edit</button>
                <br>
                <br>
                <span>Phone : {{ phone}}</span> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#phonemodal">Edit</button>
+               <br>
+               <br>
+               <span>NID : {{ nid}}</span>
+               <br>
+               <br>
+               <span>License : {{ license}}</span><button type="button" class="btn btn-success" data-toggle="modal" data-target="#licensemodal">Edit</button>
             </div>
+         
         </div>
-        <div class="col-5">
-            <div class="textbody2">
-              <span>NID : {{ nid}}</span>
-              <br>
-              <br>
-              <span>License : {{ license}}</span><button type="button" class="btn btn-success" data-toggle="modal" data-target="#licensemodal">Edit</button>
-            </div>
-        </div>
-        <div class="col-1"></div>
+       </div>
     </div>
 
 <!-- image Modal -->

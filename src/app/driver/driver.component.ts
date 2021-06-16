@@ -14,6 +14,7 @@ export class DriverComponent implements OnInit {
   public fname:any
   public lname:any
   public phone:any
+  public fare:any
   imgSrc: string="/assets/image/null.png"
   
  
@@ -23,6 +24,7 @@ export class DriverComponent implements OnInit {
   public startdate:any
   public enddate:any
   public cphone:any
+  public caddress:any
  public id:any
 getdata={}
 display=false
@@ -54,6 +56,8 @@ searchJobbtn=true
       this.startdate=data[2]
       this.enddate=data[3]
       this.cphone=data[4]
+      this.caddress=data[5]
+      this.fare=data[6]
 4
     })
 

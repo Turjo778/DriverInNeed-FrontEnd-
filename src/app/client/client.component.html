@@ -1,11 +1,32 @@
-<nav class="navbar" style="font-family: Bangers, cursive;
-color: white;
-font-size: 30px;">
+
+<nav class="navbar" style="font-family: Bangers, cursive; color: white; font-size: 30px;">
    <span id="name"> Driver In Need</span>
 </nav>
 
-<body>
+<div class="jobreq"  *ngIf="showJobReq">
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <div class="candidate"  *ngFor="let item of reqjobinfo">
+        <div class="row">
+            <div class="col-4">
 
+            </div>
+            <div class="col-8">
+                <h3>Driver's Name:{{item[3]}} {{" "+item[4]}}</h3>
+               
+                <h3>Driver's phone No:{{item[2]}}</h3>
+                <h3>Driver's Address:{{item[5]}}</h3>
+                <h3>Fare:{{item[6]}}</h3>
+                <h3>Service Type: {{item[7]}}</h3>
+                <button type="button" class="btn btn-success"  (click)="SelectThis(item[7],item[2],item[6])">Select</button>
+                <button type="button" class="btn btn-success"  (click)="SaveData()">Confirm</button>
+                <!-- data-toggle="modal" data-target="#exampleModalLong" -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="body">
 
             <input type ="checkbox" id="check">
         <label for="check">
@@ -33,6 +54,7 @@ font-size: 30px;">
         
             
             <div class="offerBox" *ngIf="displayOfferBox" >
+                
                 <div class="row">
                     <div class="col-xl-2 col-lg-1"></div>
                     <div class="col-xl-4 col-lg-4 col-md-4 ">
@@ -78,6 +100,7 @@ font-size: 30px;">
             </div>
     
 
+
     <div class=currentService  *ngIf="showCurrentService">
         <!-- <h1>service started</h1> -->
         <div class="waviy">
@@ -100,6 +123,10 @@ font-size: 30px;">
         <div class="info">
             <h3>Driver Name : {{drivername}}</h3>
             <br>
+            <h3>Driver Phone:{{driverphone}}</h3>
+            <br>
+            <h3>Fare:{{Dnewfare}}</h3>
+            <br>
             <h3>Service Start date :{{startdate}}</h3>
             <br>
             <h3>Service End date :{{enddate}}</h3>
@@ -111,7 +138,5 @@ font-size: 30px;">
         </div>
         
     </div>
-   
-
-</body>
-
+    
+</div>

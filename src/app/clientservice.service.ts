@@ -63,5 +63,11 @@ clientimg="http://127.0.0.1:5000/displayClientImage/"
   updateClientReqService(data:any){
     return this.http.put("http://127.0.0.1:5000/changeClientReqService",data)
   }
+  checkReqJob(phn:any):Observable<any>{
+    return this.http.get<any[]>("http://127.0.0.1:5000/LookForJobReq/"+phn)
+  }
+  DeleteJobReq(phn:any){
+    return this.http.delete("http://127.0.0.1:5000/DeleteJobReq/"+phn)
+  }
 }
   
